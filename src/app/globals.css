@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+:root {
+  --color-white: #ffffff;
+
+  --color-grey50: #f1f1f4;
+  --color-grey100: #f7f7f9;
+  --color-grey150: #eef0ff;
+  --color-grey200: #e4e4ea;
+  --color-grey250: #d3d3d6;
+  --color-grey290: #b2b3bd;
+  --color-grey300: #7d7e8e;
+  --color-grey400: #5d6380;
+  --color-grey600: #626a93;
+  --color-warning: #ba4e00;
+  --color-warning100: #fff2e8;
+  --color-warning200: #cdcdcd;
+  --color-warning300: #d14b45;
+  --color-red50: #fd5c5c33;
+  --color-red100: #ff8484;
+  --color-green100: #44814d33;
+  --color-blue100: #437ef7;
+  --color-blue200: #464ec9;
+  --color-black: #000000;
+  --color-grey500: #454550;
+  --color-primary: #d14b45;
+  --color-primary100: #faeded;
+  --color-primary800: #da716c;
+  --color-primary200: #e0685f;
+  --color-primary900: #be4741;
+  --color-secondary: #15205a;
+  --color-success: #198038;
+  --color-error100: #fff1f1;
+  --color-error200: #e1e4ea;
+  --color-error: #da1e28;
+  --color-success100: #defbe6;
+
+  /* sizes */
+  --sidebar-collapsed: 70px;
+  --sidebar-normal: 260px;
+
+  /* font-size  */
+  --font-caption: 12px;
+  --font-body-1: 14px;
+  --font-body-2: 20px;
+  --font-heading-4: 28px;
+  --font-subtitle-1: 18px;
+
+  /* Border-radius */
+  --border-radius-xs: 8px;
+  --border-radius-xxs: 4px;
+  --border-radius-sm: 12px;
+  --border-radius-md: 16px;
+  --border-radius-max: 50%;
+
+  /* Shadow */
+  --shadow-elevation-small: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-xs: 0px 10px 40px 0px #0000001f;
+  --shadow-elevation-radio:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.2), inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+
+  /* BackDrop colors */
+  --backdrop-black-003: rgba(0, 0, 0, 0.3);
+
+  /* Spacing */
+  --spacing-none: 0px;
+  --spacing-2: 2px;
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-xsm: 10px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 18px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+  --spacing-3xl: 28px;
+  --spacing-4xl: 32px;
+  --spacing-5xl: 36px;
+  --spacing-6xl: 40px;
+  --spacing-7xl: 44px;
+  --spacing-8xl: 48px;
+  --spacing-9xl: 52px;
+  --spacing-10xl: 56px;
+  --spacing-11xl: 60px;
+  --spacing-12xl: 64px;
+  --spacing-13xl: 68px;
+  --spacing-14xl: 72px;
+  --spacing-15xl: 76px;
+  --spacing-16xl: 80px;
+  --spacing-17xl: 84px;
+  --spacing-18xl: 88px;
+  --spacing-19xl: 92px;
+  --spacing-20xl: 96px;
+  /* Entity Heights */
+  --table-medium: 550px;
+  --menu-size: 300px;
+  --eligibility-card-height: 200px;
+
+  /* Z-index */
+  --z-index-1: 1;
+  --z-index-5: 5;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50; /*  Sidebar */
+  --z-index-max: 100; /*  PageLoader */
+
+  --topbar-height: 56px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    /* color-scheme: dark; */
+  }
+}
+
+/* TODO: use POSTCSS for media queries */
+/* https://tailwindcss.com/docs/responsive-design */
+/* Breakpoint prefix	Minimum width	CSS
+sm	40rem (640px)	@media (width >= 40rem) { ... }
+md	48rem (768px)	@media (width >= 48rem) { ... }
+lg	64rem (1024px)	@media (width >= 64rem) { ... }
+xl	80rem (1280px)	@media (width >= 80rem) { ... }
+2xl	96rem (1536px)	@media (width >= 96rem) { ... } */

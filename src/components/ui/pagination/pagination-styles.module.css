@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.pagination__dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1;
+}
+
+:global(.MuiDivider-root).pagination__divider {
+  height: var(--spacing-md);
+}
+
+.list__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  height: 70vh;
+  margin: 0 auto;
+  gap: var(--spacing-xl);
+  flex-direction: column;
+}

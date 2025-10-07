@@ -1,0 +1,40 @@
+.login__form {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  max-width: calc(10 * var(--spacing-9xl));
+  margin: auto;
+  margin-top: 12rem;
+}
+
+.login__forgot {
+  margin-right: auto;
+  display: block;
+  text-align: right;
+}
+
+.login__google {
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.login__text {
+  margin-top: var(--spacing-xxs);
+}
+.login__remember_password {
+  margin-top: var(--spacing-xxs);
+  text-align: 'center';
+}
+:global(.MuiTextField-root).login__text_bottom {
+  margin-bottom: var(--spacing-sm);
+}
+
+.login {
+  margin-left: var(--spacing-2);
+  display: inline-flex;
+}
+:global(.MuiButton-root).login__mt {
+  margin-top: var(--spacing-3xl);
+  background: var(--color-blue200); 
+  width: 100%;
+}

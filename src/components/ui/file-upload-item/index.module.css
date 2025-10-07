@@ -1,0 +1,69 @@
+.upload_container_drag {
+  transition: 'all 0.2s ease-in-out';
+  cursor: 'pointer';
+  background-color: var(--color-grey300);
+}
+
+.upload__icon {
+  cursor: pointer;
+}
+
+.upload__error {
+  white-space: pre-line;
+}
+
+.upload_item {
+  background: var(--color-white);
+  max-width: 100%;
+  max-height: calc(18 * var(--spacing-sm));
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-grey100);
+  padding: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.upload_input {
+  display: none;
+}
+
+.upload__progress {
+  width: 90%;
+  margin-left: var(--spacing-6xl);
+  margin-top: var(--spacing-md);
+}
+
+:global(.MuiLinearProgress-root).upload__progress {
+  height: var(--spacing-xsm);
+  background-color: #e0e0e0;
+  border-radius: var(--border-radius-xxs);
+}
+
+:global(.MuiLinearProgress-root).upload__progress :global(.MuiLinearProgress-barColorPrimary) {
+  background-color: var(--color-blue200);
+  border-radius: var(--border-radius-xxs);
+}
+
+:global(.MuiLinearProgress-root).upload__progress :global(.MuiLinearProgress-bar1Determinate) {
+  background-color: var(--color-blue200);
+}
+
+:global(.MuiButton-root).upload__button {
+  height: var(--spacing-7xl);
+  width: var(--spacing-16xl);
+  align-self: last baseline;
+}
+
+:global(.MuiTextField-root).upload__text_field {
+  width: calc(10 * var(--spacing-8xl));
+}
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 64rem) {
+  .upload_item {
+    height: 100%;
+  }
+}
+
+/* Mobile (≤ 640px) */
+@media (max-width: 40rem) {
+}

@@ -1,0 +1,7 @@
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xxl);
+  align-items: center;
+  min-height: var(--spacing-9xl);
+}

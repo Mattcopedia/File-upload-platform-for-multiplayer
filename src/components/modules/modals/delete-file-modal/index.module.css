@@ -1,0 +1,92 @@
+:global(.MuiSvgIcon-root).list__close_icon {
+  height: var(--spacing-xxl);
+  width: var(--spacing-xxl);
+}
+
+:global(.MuiSvgIcon-root).list_status__close_icon {
+  height: var(--spacing-xxl);
+  width: var(--spacing-xxl);
+  cursor: pointer;
+}
+.list__loan_details_dialog_mobile :global(.MuiDialog-paper) {
+  position: fixed;
+  margin: var(--spacing-none);
+  bottom: var(--spacing-3xl);
+  border-radius: var(--border-radius-md);
+  width: 90%;
+}
+
+:global(.MuiSvgIcon-root).list_status__close_icon:hover {
+  background: var(--color-grey100);
+}
+:global(.MuiIconButton-root).list_close_icon_container {
+  background: transparent;
+}
+
+:global(.MuiFormControlLabel-root).list_form_control_label {
+  justify-content: space-between;
+  width: 100%;
+  margin: var(--spacing-none);
+  gap: var(--spacing-md);
+}
+
+:global(.MuiTypography-root).list_text_title {
+  width: calc(10 * var(--spacing-6xl));
+  flex-shrink: var(--spacing-none);
+}
+
+.list_show_desktop {
+  display: flex;
+}
+.list_show_mobile {
+  display: none;
+}
+
+.list_header {
+  padding-top: var(--spacing-xs);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  align-items: center;
+  padding-bottom: var(--spacing-md);
+}
+
+.list__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__detail_text_container {
+  background: var(--color-blue50);
+  padding: var(--spacing-xl);
+  border-top-right-radius: var(--spacing-xs);
+  border-top-left-radius: var(--spacing-xs);
+}
+
+.list__dialogBox :global(.MuiDialog-paper) {
+  padding-top: var(--spacing-9xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-4xl);
+  padding-right: var(--spacing-4xl);
+}
+
+.list__loan_details_dialog :global(.MuiDialog-paper) {
+  width: 80%;
+  border-radius: var(--border-radius-xs);
+}
+
+.list__loan_name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-xs);
+  border-radius: var(--border-radius-xs);
+  border: var(--spacing-2) solid var(--color-grey200);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
