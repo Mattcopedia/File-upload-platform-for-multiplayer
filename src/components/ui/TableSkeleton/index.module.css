@@ -1,0 +1,7 @@
+.skeleton__wapper {
+  margin: 0 var(--spacing-lg);
+}
+
+.skeleton__stack {
+  min-height: 100%;
+}

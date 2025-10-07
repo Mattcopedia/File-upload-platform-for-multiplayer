@@ -1,0 +1,50 @@
+.pulse__icon_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-12xl);
+  height: var(--spacing-12xl);
+  color: var(--pulse-color);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.pulse__icon_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--spacing-md);
+  background-color: var(--pulse-bg-color);
+  animation: pulsate 2s infinite ease-in-out;
+}
+
+.primary {
+  --pulse-bg-color: var(--color-primary200);
+  --pulse-color: var(--color-primary);
+}
+
+.error {
+  --pulse-bg-color: var(--color-error100);
+  --pulse-color: var(--color-error);
+}
+
+.pulse__icon {
+  z-index: var(--z-index-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}

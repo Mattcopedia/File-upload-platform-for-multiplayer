@@ -1,0 +1,5 @@
+# Run lint-staged
+npx lint-staged
+
+# Run TypeScript check and exit with error if it fails
+npx tsc --noEmit || exit 1

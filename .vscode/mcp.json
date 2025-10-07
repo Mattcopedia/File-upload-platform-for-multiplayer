@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "my-mcp-server-19e83cde": {
+      "url": "https://api.multiplayer.app/v0/api/public/mcp",
+      "type": "http"
+    }
+  },
+  "inputs": []
+}

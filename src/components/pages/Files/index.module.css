@@ -1,0 +1,30 @@
+:global(.MuiTypography-root).files__table_action {
+  background: var(--color-white);
+  cursor: pointer;
+  color: var(--color-blue200);
+}
+
+.files__table_actions {
+  padding: var(--spacing-none);
+}
+.files__container {
+  background: var(--color-grey100);
+  min-height: 100vh;
+}
+
+:global(.MuiButtonBase-root).files__table_actions {
+  padding: var(--spacing-none);
+}
+
+.files__search__container {
+  margin-bottom: var(--spacing-4xl);
+}
+
+:global(.MuiAvatar-root).files__table_avatar {
+  height: var(--spacing-3xl);
+}
+:global(.MuiTableCell-root).files__table_cell {
+  white-space: normal;
+  word-break: break-all;
+  max-width: calc(10 * var(--spacing-3xl));
+}

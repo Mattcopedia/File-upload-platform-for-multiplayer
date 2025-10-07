@@ -1,0 +1,64 @@
+name: Build and publish Docker images
+
+on:
+  push:
+    branches:
+        - develop
+        - staging
+        - main
+        
+
+env:
+  REGISTRY: docker.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+        
+  build-and-push-hispitalstore-image:
+    name: Build and push hispitalstore Docker image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+          
+      - name: Build and push hispitalstore Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          tags: 1med/helium-hospitalstore-frontend:${{ github.ref == 'refs/heads/develop' && 'dev' || github.ref == 'refs/heads/staging' && 'staging' || github.ref == 'refs/heads/main' && 'prod' || 'latest' }}
+          file: ./Dockerfile
+          build-args: |
+            NEXT_PUBLIC_API_URL=https://imagestore-api.heliumosapp.com
+
+
+      - name: Set up ArgoCD CLI
+        run: |
+          sudo curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+          sudo chmod +x /usr/local/bin/argocd
+
+      - name: ArgoCD Login
+        if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/staging'
+        run: |
+          yes | argocd login ${{ vars.ARGOCD_STAGING_URL }} --insecure --username ${{ secrets.ARGOCD_USERNAME }} --password  ${{ secrets.ARGOCD_PASSWORD }}
+
+      - name: ArgoCD Login
+        if: github.ref == 'refs/heads/main'
+        run: |
+          yes | argocd login ${{ vars.ARGOCD_PROD_URL }} --insecure --username ${{ secrets.ARGOCD_USERNAME }} --password  ${{ secrets.ARGOCD_PASSWORD }}
+
+      - name: ArgoCD Sync App
+        env:
+          APP_NAME: helium-credit-frontend-${{ github.ref == 'refs/heads/develop' && 'dev' || github.ref == 'refs/heads/staging' && 'staging' || github.ref == 'refs/heads/main' && 'prod' || 'latest' }}
+        run: |
+          argocd app actions run $APP_NAME restart --kind Deployment

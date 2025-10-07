@@ -1,0 +1,21 @@
+.default {
+  background: var(--color-white);
+}
+
+.content {
+  flex: 1;
+  padding: var(--spacing-xl);
+  transition: margin-left 0.3s ease;
+  margin-left: var(--sidebar-normal);
+  background-color: var(--color-grey100);
+}
+
+.content__collapsed {
+  margin-left: var(--sidebar-collapsed);
+}
+
+:global(.MuiDivider-root).content__divider {
+  border-bottom-width: var(--spacing-2);
+  box-shadow: var(--shadow-elevation-small);
+  margin-top: var(--spacing-md);
+}
